@@ -18,6 +18,10 @@
     align-items: center;
     justify-content: flex-end;
 
+    span {
+      cursor: pointer;
+    }
+
     .nav-link {
       padding: 10px 15px;
       cursor: pointer;
