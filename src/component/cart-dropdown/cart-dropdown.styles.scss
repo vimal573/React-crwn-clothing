@@ -1,6 +1,6 @@
 .cart-dropdown-container {
   position: absolute;
-  width: 300px;
+  width: 280px;
   height: 360px;
   display: flex;
   flex-direction: column;
@@ -17,13 +17,28 @@
   }
 
   .cart-items {
-    height: 320px;
+    height: 280px;
+
     display: flex;
     flex-direction: column;
-    // overflow: scroll;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #e4e4e4;
+      border-radius: 100px;
+    }
   }
 
   button {
-    margin-top: auto;
+    margin-top: 10px;
   }
 }
