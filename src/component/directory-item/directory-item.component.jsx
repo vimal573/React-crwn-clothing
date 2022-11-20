@@ -8,9 +8,9 @@ import {
 
 const DirectoryItem = ({ category }) => {
   const { imageUrl, title, route } = category;
-  const navigaate = useNavigate();
+  const navigate = useNavigate();
 
-  const onNavigateHandler = () => navigaate(route);
+  const onNavigateHandler = () => navigate(route);
 
   return (
     <DirectoryItemContainer onClick={onNavigateHandler}>
