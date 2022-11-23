@@ -7,7 +7,7 @@ import {
   fetchCategoriesFailed,
 } from "./category.action";
 
-import { CATEGORY_ACTION_TYPES } from "./category.types";
+import { CATEGORIES_ACTION_TYPES } from "./category.types";
 
 export function* fetchCategoriesAsync() {
   try {
@@ -20,7 +20,7 @@ export function* fetchCategoriesAsync() {
 
 export function* onFetchCategories() {
   yield takeLatest(
-    CATEGORY_ACTION_TYPES.FETCH_CATEGORIES_START,
+    CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_START,
     fetchCategoriesAsync
   );
 }
