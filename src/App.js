@@ -2,11 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import {
-  onAuthStateChangeListener,
-  createUserDocumentFromAuth,
-  getCurrentUser,
-} from "./utils/firebase/firebase.utills";
 import Home from "./routes/home/home.component";
 
 import Navigation from "./routes/navigation/navigation.component";
