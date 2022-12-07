@@ -74,13 +74,15 @@ export function* signUp({ payload: { email, password, displayName } }) {
       password
     );
 
-    yield put(signUpSuccess(user, displayName));
+    yield put(signUpSuccess(user, { displayName }));
   } catch (error) {
     yield put(signUpFailed(error));
   }
 }
 
 export function* signInAfterSignUp({ payload: { user, aditionalInfo } }) {
+  yield console.log(aditionalInfo);
+
   yield call(getSnapshotFromUserAuth, user, aditionalInfo);
 }
 

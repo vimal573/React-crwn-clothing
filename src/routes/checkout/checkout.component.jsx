@@ -13,6 +13,7 @@ import {
   HeaderBlock,
   Total,
 } from "./chekout.styles";
+import PaymentFrom from "../../component/payment-form/payment-form.component";
 
 const Checkout = () => {
   const cartItems = useSelector(selectCartItems);
@@ -46,6 +47,8 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <Total>Total: ${cartTotal}</Total>
+
+      <PaymentFrom />
     </CheckoutContainer>
   );
 };
