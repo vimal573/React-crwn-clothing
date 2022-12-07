@@ -20,6 +20,8 @@ const PaymentFrom = () => {
   const currentUser = useSelector(selectCurrentUser);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
+  console.log(currentUser);
+
   const paymentHandler = async (e) => {
     e.preventDefault();
 
