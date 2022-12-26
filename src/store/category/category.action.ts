@@ -19,11 +19,6 @@ export type FetchCtegoriesFailed = ActionWithPayload<
   Error
 >;
 
-export type CategoryAction =
-  | FetchCtegoriesStart
-  | FetchCtegoriesSuccess
-  | FetchCtegoriesFailed;
-
 export const fetchCategoriesStart = withMatcher(
   (): FetchCtegoriesStart =>
     createAction(CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_START)

@@ -20,12 +20,12 @@ import {
   signOutUser,
 } from "../../utils/firebase/firebase.utills";
 
-export function* getSnapshotFromUserAuth(userAuth, additionalInfo) {
+export function* getSnapshotFromUserAuth(userAuth, additionalDetails) {
   try {
     const userSnapshot = yield call(
       createUserDocumentFromAuth,
       userAuth,
-      additionalInfo
+      additionalDetails
     );
     yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
   } catch (error) {
