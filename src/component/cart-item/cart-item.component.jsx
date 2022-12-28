@@ -5,7 +5,7 @@ const CartItem = ({ cartItem }) => {
 
   return (
     <CartItemContainer>
-      <img src={imageUrl} alt={name} />
+      <img src={`${imageUrl}`} alt={`${name}`} />
       <ItemDetailes>
         <span>{name}</span>
         <span>
