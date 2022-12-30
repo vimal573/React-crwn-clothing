@@ -12,13 +12,15 @@ import {
 } from "./cart-dropdown.styles";
 
 import { selectCartItems } from "../../store/cart/cart.selector";
+import { useCallback, useMemo } from "react";
 
 const CartDropdown = () => {
   const cartItems = useSelector(selectCartItems);
-
   const navigate = useNavigate();
 
-  const checkOutHandler = () => navigate("/checkout");
+  const checkOutHandler = useCallback(() => {
+    navigate("/checkout");
+  }, []);
 
   return (
     <CartDropdownContainer>
